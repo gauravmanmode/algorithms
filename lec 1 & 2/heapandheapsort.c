@@ -2,7 +2,8 @@
 #define left(i) i<<1
 #define right(i) (i<<1) + 1
 #define parent(i) i>>1
-//#define length(A) sizeof(A)/sizeof(int)
+#define ARR (int *)(A - 1)
+#define length 10
 #define swap(A, i, j) {  int temp = A[i]; \
                          A[i] = A[j];   \
                          A[j] = temp; } 
@@ -12,7 +13,6 @@
                             printf(" %d ", (A)[i]);  }
 
 int heapsize;
-int length = 9;
 void maxheapify(int A[], int i)
 {
     if (i > length/2)
@@ -53,8 +53,8 @@ void heapsort(int A[])
 main()
 {    
     int A[] = {2,6,5,18,1,2,9,3,5,6};
-    heapsort(A-1);
+    heapsort(ARR);
     //buildmaxheap(A-1);
-    printarr(A-1)
-    printf("\n ** %d ", 5);
+    printarr(ARR)
+    printf("\n ** %ld ", length);
 }
